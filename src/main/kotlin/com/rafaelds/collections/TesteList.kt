@@ -10,6 +10,22 @@ fun main() {
         .sortedBy { it.salario }
         .forEach { println(it.toString()) }
     println(funcionarios.find { it.nome == "Renata" })
+    println("---------------WORKING WITH SET----------------")
+
+    val funcionario1 = setOf(rafael, wesley)
+    val funcionario2 = setOf(tiago)
+
+    val resultUnion = funcionario1.union(funcionario2)
+    println(resultUnion)
+    println("---------------------------")
+
+    val resultSubtract = resultUnion.subtract(funcionario1)
+    println(resultSubtract)
+    println("---------------------------")
+
+    val resultIntersect = resultUnion.intersect(funcionario2)
+    println(resultIntersect)
+
 }
 
 data class Funcionarios(
