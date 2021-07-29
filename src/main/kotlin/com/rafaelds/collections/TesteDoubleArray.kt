@@ -17,4 +17,11 @@ fun main() {
     remuneracao.sort()
     remuneracao.forEach { println(it) }
 
+    println(remuneracao.maxOrNull())
+    println(remuneracao.minOrNull())
+    println(remuneracao.average())
+
+    val salariosMaiorDoisMil = remuneracao.filter { it > 2000.00 }
+    salariosMaiorDoisMil.forEach { println(it) }
+
 }
