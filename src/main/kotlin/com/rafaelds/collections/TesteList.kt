@@ -6,7 +6,9 @@ fun main() {
     val tiago = Funcionarios("Tiago", 142.0)
     val funcionarios = listOf<Funcionarios>(rafael, wesley, tiago)
 
-    funcionarios.forEach { println(it.toString()) }
+    funcionarios
+        .sortedBy { it.salario }
+        .forEach { println(it.toString()) }
     println(funcionarios.find { it.nome == "Renata" })
 }
 
